@@ -1,0 +1,59 @@
+<h1>About Us</h1>
+
+<p>
+  We are a up and coming garden with all the best plants... Flowers, oh we got flowers! Trees? Oh we got more trees than the Amazon! Deadly plants? Only the cream of th crop deadliest plants for or visitors.
+</p>
+
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+
+  <h5 *ngIf="success">Your form is Valid!!</h5>
+
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+    <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+      <div *ngIf="messageForm.controls.name.errors.required">Your name is required, bro.</div>
+    </div>
+  </label>
+
+  <label>
+    Message:
+    <textarea formControlName="message"></textarea>
+    <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
+      <div *ngIf="messageForm.controls.message.errors.required">A message is required</div>
+    </div>
+  </label>
+
+  <label>
+      Email:
+      <input type="text" formControlName="email">
+      <div *ngIf="submitted && messageForm.controls.email.errors" class="error">
+        <div *ngIf="messageForm.controls.email.errors.required">Your email is required, bro.</div>
+      </div>
+    </label>
+
+    <label>
+        Interest:
+        <input type="text" formControlName="interest">
+        <div *ngIf="submitted && messageForm.controls.interest.errors" class="error">
+          <div *ngIf="messageForm.controls.interest.errors.required">Please provide interest, bro.</div>
+        </div>
+      </label>
+
+      <input type="submit" value="Send Message" class="cta">
+
+      <div *ngIf="submitted" class="results">
+        <strong>Name:</strong>
+        <span>{{ messageForm.controls.name.value }}</span>
+
+        <strong>Message:</strong>
+        <span>{{ messageForm.controls.message.value }}</span>
+
+        <strong>Email:</strong>
+        <span>{{ messageForm.controls.email.value }}</span>
+
+        <strong>Interest:</strong>
+        <span>{{ messageForm.controls.interest.value }}</span>
+      </div>
+
+</form>
