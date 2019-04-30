@@ -21,8 +21,6 @@ const routes = [
   {path: 'products', component: ProductsComponent},
 ];
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +39,7 @@ const routes = [
     HomeComponent
 
   ],
+
   providers: [
     ProductsService
   ],
