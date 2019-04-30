@@ -11,6 +11,7 @@ import { MatTableDataSource } from '@angular/material';
 export class ProductsComponent implements OnInit {
   dataSource: MatTableDataSource<Product>;
   columnNames = ['id', 'product_name', 'product_description'];
+// tslint:disable-next-line: variable-name
   constructor(private _productsService: ProductsService) {
     
   }
