@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpClientModule, HttpHeaders, HttpClient } from '@angular/common/http';
+
 
 
 @Component({
