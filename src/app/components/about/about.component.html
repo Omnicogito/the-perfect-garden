@@ -1,8 +1,10 @@
 <h1>About Us</h1>
 
 <p>
-  We are a up and coming garden with all the best plants... Flowers, oh we got flowers! Trees? Oh we got more trees than the Amazon! Deadly plants? Only the cream of th crop deadliest plants for or visitors.
+  We are a up and coming garden with all the best plants... Flowers, oh we got flowers! Trees? Oh we got more trees than the Amazon! Deadly plants? Only the cream of the crop deadliest plants for our visitors.
 </p>
+<br>
+<h2>Would you like to know more??</h2>
 
 <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
 
@@ -13,14 +15,6 @@
     <input type="text" formControlName="name">
     <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
       <div *ngIf="messageForm.controls.name.errors.required">Your name is required, bro.</div>
-    </div>
-  </label>
-
-  <label>
-    Message:
-    <textarea formControlName="message"></textarea>
-    <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
-      <div *ngIf="messageForm.controls.message.errors.required">A message is required</div>
     </div>
   </label>
 
@@ -39,6 +33,18 @@
           <div *ngIf="messageForm.controls.interest.errors.required">Please provide interest, bro.</div>
         </div>
       </label>
+
+  <label>
+    Message:
+    <textarea formControlName="message"></textarea>
+    <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
+      <div *ngIf="messageForm.controls.message.errors.required">A message is required</div>
+    </div>
+  </label>
+
+  
+
+    
 
       <input type="submit" value="Send Message" class="cta">
 
