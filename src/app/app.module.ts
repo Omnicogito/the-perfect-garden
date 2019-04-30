@@ -17,9 +17,12 @@ import { RouterModule } from '@angular/router';
 import { MatTableModule } from '@angular/material';
 
 
-const routes = [
-  {path: 'products', component: ProductsComponent},
-];
+// const routes = [
+//   {path: 'products', component: ProductsComponent},
+//  ]
+
+
+
 
 @NgModule({
   declarations: [
@@ -27,6 +30,8 @@ const routes = [
     HeaderComponent,
     AboutComponent,
     ProductsComponent,
+    HomeComponent,
+    ThePerfectGardenDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -34,10 +39,9 @@ const routes = [
     MatButtonModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    ProductsComponent,
-    ThePerfectGardenDetailComponent,
-    HomeComponent
-
+    MatTableModule,
+    HttpClientModule,
+    RouterModule
   ],
 
   providers: [

@@ -6,7 +6,7 @@ body{
     margin: 0 auto;
     font-family: "Montserrat";
     font-size: 18px;
-    background-color: rgb(19, 99, 146);
+    background-color: rgb(19, 99, 146, 0.8);
     background-image: url("assets/gardenhome.jpg");
     background-size: 100%;
 }
@@ -18,7 +18,7 @@ a {
     margin: 0 auto;
     padding: 1.3em;
     display: grid;
-
+    
     grid-template-columns: 30% auto; 
 }
 .container.a{
@@ -30,10 +30,11 @@ section{
     padding: 2em;
 }
 .cover {
-    background: rgba(26, 26, 26, 0.70);
+    background: rgba(255, 255, 255, 0.80);
 }
 .panel-body{
     background-image: url("assets/gardenhome5.jpg");
     border-radius: 5px;
     width: 49.8%;
     height: 300px;
+}
